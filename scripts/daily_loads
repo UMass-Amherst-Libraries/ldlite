@@ -1,0 +1,28 @@
+#!/bin/sh
+
+hdate=$(date "+%Y%m%d-%H%M")
+#echo "$hdate"
+
+cd /home/sbischof/ldlite-main/scripts
+python3 inventory_load.py > ../logs/inventory.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 inv_plus_load.py  > ../logs/inv_plus.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 agree_load.py > ../logs/agree.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 circ_load.py > ../logs/circ.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 courses_load.py > ../logs/courses.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 fines_f_load.py > ../logs/fines_f.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90 
+python3 finance_load.py > ../logs/finance.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 orders_load.py > ../logs/orders.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 org_load.py > ../logs/org.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90 
+python3 user_load.py > ../logs/user.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+python3 perms_load.py > ../logs/perms.`date "+%Y%m%d-%H%M"`.log 2>&1
+

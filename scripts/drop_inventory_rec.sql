@@ -1,0 +1,53 @@
+DROP TABLE IF EXISTS inventory.holdings_record0;
+DROP TABLE IF EXISTS inventory.holdings_record1;
+DROP TABLE IF EXISTS inventory.holdings_record2;
+DROP TABLE IF EXISTS inventory.holdings_record3;
+DROP TABLE IF EXISTS inventory.holdings_record4;
+DROP TABLE IF EXISTS inventory.holdings_record5;
+DROP TABLE IF EXISTS inventory.holdings_record6;
+DROP TABLE IF EXISTS inventory.holdings_record7;
+DROP TABLE IF EXISTS inventory.holdings_record8;
+DROP TABLE IF EXISTS inventory.holdings_record9;
+DROP TABLE IF EXISTS inventory.holdings_recorda;
+DROP TABLE IF EXISTS inventory.holdings_recordb;
+DROP TABLE IF EXISTS inventory.holdings_recordc;
+DROP TABLE IF EXISTS inventory.holdings_recordd;
+DROP TABLE IF EXISTS inventory.holdings_recorde;
+DROP TABLE IF EXISTS inventory.holdings_recordf;
+
+DROP TABLE IF EXISTS inventory.item0;
+DROP TABLE IF EXISTS inventory.item1;
+DROP TABLE IF EXISTS inventory.item2;
+DROP TABLE IF EXISTS inventory.item3;
+DROP TABLE IF EXISTS inventory.item4;
+DROP TABLE IF EXISTS inventory.item5;
+DROP TABLE IF EXISTS inventory.item6;
+DROP TABLE IF EXISTS inventory.item7;
+DROP TABLE IF EXISTS inventory.item8;
+DROP TABLE IF EXISTS inventory.item9;
+DROP TABLE IF EXISTS inventory.itema;
+DROP TABLE IF EXISTS inventory.itemb;
+DROP TABLE IF EXISTS inventory.itemc;
+DROP TABLE IF EXISTS inventory.itemd;
+DROP TABLE IF EXISTS inventory.iteme;
+DROP TABLE IF EXISTS inventory.itemf;
+
+DROP TABLE IF EXISTS inventory.instance0;
+DROP TABLE IF EXISTS inventory.instance1;
+DROP TABLE IF EXISTS inventory.instance2;
+DROP TABLE IF EXISTS inventory.instance3;
+DROP TABLE IF EXISTS inventory.instance4;
+DROP TABLE IF EXISTS inventory.instance5;
+DROP TABLE IF EXISTS inventory.instance6;
+DROP TABLE IF EXISTS inventory.instance7;
+DROP TABLE IF EXISTS inventory.instance8;
+DROP TABLE IF EXISTS inventory.instance9;
+DROP TABLE IF EXISTS inventory.instancea;
+DROP TABLE IF EXISTS inventory.instanceb;
+DROP TABLE IF EXISTS inventory.instancec;
+DROP TABLE IF EXISTS inventory.instanced;
+DROP TABLE IF EXISTS inventory.instancee;
+DROP TABLE IF EXISTS inventory.instancef;
+
+
+vacuum;

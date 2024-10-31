@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd /home/sbischof/ldlite-main/scripts
+python3 holdings_load_id.py > ../logs/holds_id.`date "+%Y%m%d-%H%M"`.log 2>&1
+
+
+
+
+
+

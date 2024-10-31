@@ -1,0 +1,29 @@
+#!/bin/sh
+
+
+cd /home/sbischof/ldlite-main/scripts
+#python3 items_load.py > ../logs/items.`date "+%Y%m%d-%H%M"`.log 2>&1
+/usr/bin/sh /home/sbischof/ldlite-main/scripts/item_id
+sleep 90
+#python3 holdings_load.py  > ../logs/holdings.`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 90
+#/usr/bin/python3 /home/sbischof/ldlite-main/scripts/instance_load.py > /home/sbischof/ldlite-main/logs/instance_cron.`date "+%Y%m%d-%H%M"`.log 2>&1
+/usr/bin/sh /home/sbischof/ldlite-main/scripts/instance_id
+sleep 90
+#python3 holdings_load.py  > ../logs/holdings.`date "+%Y%m%d-%H%M"`.log 2>&1
+/usr/bin/sh /home/sbischof/ldlite-main/scripts/hold_id
+sleep 90
+#cp /home/sbischof/.local/lib/python3.8/site-packages/ldlite/__init__.py.5000  /home/sbischof/.local/lib/python3.8/site-packages/ldlite/__init__.py
+#sleep 5
+/usr/bin/python3 /home/sbischof/ldlite-main/scripts/src_load.py > /home/sbischof/ldlite-main/logs/src_cron_`date "+%Y%m%d-%H%M"`.log 2>&1
+#cp /home/sbischof/.local/lib/python3.8/site-packages/ldlite/__init__.py.8000  /home/sbischof/.local/lib/python3.8/site-packages/ldlite/__init__.py
+sleep 90
+/usr/bin/psql -d ldplite -h localhost -p 6991 -Uldplite  < /home/sbischof/ldlite-main/scripts/alter_src_rec.sql > /home/sbischof/ldlite-main/logs/alter_src_`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 30
+/usr/bin/psql -d ldplite -h localhost -p 6991 -Uldplite  < /home/sbischof/ldlite-main/scripts/drop_inventory_rec.sql >/home/sbischof/ldlite-main/logs/drop_src_`date "+%Y%m%d-%H%M"`.log 2>&1
+sleep 600
+/home/sbischof/ldpmarc-main/bin/ldpmarc -D /home/sbischof/ldpmarc-main/data -f -v -m folio_source_record.marc_records_lb -r folio_source_record.records_lb -j content -u folio_read -M > /home/sbischof/ldlite-main/logs/srs_table_`date "+%Y%m%d-%H%M"`.log 2>&1
+
+
+#python3 holdings_load.py  > ../logs/holdings.`date "+%Y%m%d-%H%M"`.log 2>&1
+

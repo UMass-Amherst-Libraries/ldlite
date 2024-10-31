@@ -1,0 +1,4 @@
+ld.connect_okapi(url='https://okapi-fivecolleges-sandbox.folio.ebsco.com/',
+                 tenant='fs00001006',
+                 user='sbischof',
+                 password='tzqqc9h6DrJcMy!')
